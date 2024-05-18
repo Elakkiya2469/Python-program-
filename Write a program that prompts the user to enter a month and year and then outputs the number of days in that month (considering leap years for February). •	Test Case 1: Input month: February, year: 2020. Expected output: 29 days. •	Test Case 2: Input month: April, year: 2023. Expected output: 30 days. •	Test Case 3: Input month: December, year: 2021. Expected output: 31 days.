@@ -1,0 +1,26 @@
+def is_leap_year(year):
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        return True
+    else:
+        return False
+def get_days_in_month(month, year):
+    if month.lower() in ["january", "march", "may", "july", "august", "october", "december"]:
+        return 31
+    elif month.lower() in ["april", "june", "september", "november"]:
+        return 30
+    elif month.lower() == "february":
+        if is_leap_year(year):
+            return 29
+        else:
+            return 28
+    else:
+        return "Invalid month input."
+month1, year1 = "February", 2020
+days_in_month1 = get_days_in_month(month1, year1)
+print(f"Test Case 1: Input month: {month1}, year: {year1}. Expected output: {days_in_month1} days.")
+month2, year2 = "April", 2023
+days_in_month2 = get_days_in_month(month2, year2)
+print(f"Test Case 2: Input month: {month2}, year: {year2}. Expected output: {days_in_month2} days.")
+month3, year3 = "December", 2021
+days_in_month3 = get_days_in_month(month3, year3)
+print(f"Test Case 3: Input month: {month3}, year: {year3}. Expected output: {days_in_month3} days.")
