@@ -1,0 +1,19 @@
+def calculate_heart_rate_range(age, gender):
+    if gender.lower() == "male":
+        max_heart_rate = 220 - age
+    elif gender.lower() == "female":
+        max_heart_rate = 226 - age
+    else:
+        return "Invalid gender input. Please enter 'Male' or 'Female'."
+    lower_limit = max_heart_rate * 0.5
+    upper_limit = max_heart_rate * 0.85
+    return int(lower_limit), int(upper_limit)
+age1, gender1 = 30, "Male"
+heart_rate_range1 = calculate_heart_rate_range(age1, gender1)
+print(f"Test Case 1: Age: {age1}, Gender: {gender1}. Expected output: {heart_rate_range1[0]} - {heart_rate_range1[1]} bpm.")
+age2, gender2 = 45, "Female"
+heart_rate_range2 = calculate_heart_rate_range(age2, gender2)
+print(f"Test Case 2: Age: {age2}, Gender: {gender2}. Expected output: {heart_rate_range2[0]} - {heart_rate_range2[1]} bpm.")
+age3, gender3 = 55, "Male"
+heart_rate_range3 = calculate_heart_rate_range(age3, gender3)
+print(f"Test Case 3: Age: {age3}, Gender: {gender3}. Expected output: {heart_rate_range3[0]} - {heart_rate_range3[1]} bpm.")
