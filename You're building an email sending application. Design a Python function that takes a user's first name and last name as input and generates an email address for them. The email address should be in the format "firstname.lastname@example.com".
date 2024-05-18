@@ -1,0 +1,6 @@
+def generate_email(first_name, last_name):
+    email = f"{first_name.lower()}.{last_name.lower()}@example.com"
+    return email
+first_name = "John"
+last_name = "Doe"
+print(generate_email(first_name, last_name))  # Output: "john.doe@example.com"
