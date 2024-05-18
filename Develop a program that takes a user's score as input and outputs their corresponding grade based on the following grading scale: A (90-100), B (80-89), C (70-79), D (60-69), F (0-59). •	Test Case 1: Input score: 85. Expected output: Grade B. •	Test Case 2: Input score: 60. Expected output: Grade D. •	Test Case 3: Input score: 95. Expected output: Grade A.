@@ -1,0 +1,17 @@
+def calculate_grade(score):
+    if score >= 90 and score <= 100:
+        return "A"
+    elif score >= 80 and score < 90:
+        return "B"
+    elif score >= 70 and score < 80:
+        return "C"
+    elif score >= 60 and score < 70:
+        return "D"
+    else:
+        return "F"
+score1 = 85
+print(f"Test Case 1: Input score: {score1}. Expected output: Grade B. Actual output: Grade {calculate_grade(score1)}.")
+score2 = 60
+print(f"Test Case 2: Input score: {score2}. Expected output: Grade D. Actual output: Grade {calculate_grade(score2)}.")
+score3 = 95
+print(f"Test Case 3: Input score: {score3}. Expected output: Grade A. Actual output: Grade {calculate_grade(score3)}.")
