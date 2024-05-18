@@ -1,0 +1,7 @@
+def check_fever(temperature):
+    if temperature >= 100.4:
+        return "You have a fever."
+    else:
+        return "You do not have a fever."
+user_temperature = float(input("Enter your temperature in °F or °C: "))
+print(check_fever(user_temperature))
