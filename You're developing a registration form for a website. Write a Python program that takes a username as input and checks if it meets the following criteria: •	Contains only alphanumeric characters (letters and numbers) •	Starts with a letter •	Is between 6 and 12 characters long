@@ -1,0 +1,8 @@
+def validate_username(username):
+    return 6 <= len(username) <= 12 and username[0].isalpha() and username.isalnum()
+print(validate_username("user123"))    
+print(validate_username("gooduser"))          
+print(validate_username("user!"))             
+print(validate_username("user12@"))           
+print(validate_username("tooshort"))          
+print(validate_username("waytoolongusername"))
