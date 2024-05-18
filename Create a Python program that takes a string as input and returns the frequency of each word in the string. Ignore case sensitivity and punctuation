@@ -1,0 +1,16 @@
+import re
+from collections import Counter
+def count_word_frequency(sentence):
+    clean_sentence = re.sub(r'[^\w\s]', '', sentence.lower())
+    words = clean_sentence.split()
+    word_frequency = Counter(words)
+    return word_frequency
+def main():
+    input_string = input("Enter a string: ")
+    word_frequency = count_word_frequency(input_string)
+    print("Word frequency:")
+    for word, frequency in word_frequency.items():
+        print(f"{word}: {frequency}")
+
+if __name__ == "__main__":
+    main()
