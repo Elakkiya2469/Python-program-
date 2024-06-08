@@ -1,0 +1,12 @@
+def student_info(name, **kwargs):
+    info = f"Student Name: {name}"
+    if 'age' in kwargs:
+        info += f"\nAge: {kwargs['age']}"
+    if 'grade' in kwargs:
+        info += f"\nGrade: {kwargs['grade']}"
+    if 'school' in kwargs:
+        info += f"\nSchool: {kwargs['school']}"
+    print(info)
+
+# Example usage:
+student_info("John Doe", age=15, grade=10, school="XYZ High School")
