@@ -1,0 +1,7 @@
+def print_inverted_triangle(n):
+    for i in range(n, 0, -1):
+        print("*" * i)
+
+# Example usage:
+n = 5
+print_inverted_triangle(n)
