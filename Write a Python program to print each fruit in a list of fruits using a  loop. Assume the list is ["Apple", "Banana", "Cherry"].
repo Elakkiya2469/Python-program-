@@ -1,0 +1,5 @@
+def print_fruits(fruits):
+    for fruit in fruits:
+        print(fruit)
+fruits = ["Apple", "Banana", "Cherry"]
+print_fruits(fruits)
