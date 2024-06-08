@@ -1,0 +1,15 @@
+def print_star_pattern():
+    # Upper part of the pattern
+    for i in range(1, 6):
+        for j in range(i):
+            print("*", end=" ")
+        print()  # Move to the next line after printing each row
+    
+    # Lower part of the pattern
+    for i in range(4, 0, -1):
+        for j in range(i):
+            print("*", end=" ")
+        print()  # Move to the next line after printing each row
+
+# Example usage:
+print_star_pattern()
