@@ -1,0 +1,17 @@
+def compute(num1, num2):
+    sum_result = num1 + num2
+    difference_result = num1 - num2
+    product_result = num1 * num2
+    # Check if num2 is not zero to avoid division by zero
+    if num2 != 0:
+        quotient_result = num1 / num2
+    else:
+        quotient_result = "Undefined (division by zero)"
+    return sum_result, difference_result, product_result, quotient_result
+
+# Example usage:
+result = compute(10, 5)
+print("Sum:", result[0])
+print("Difference:", result[1])
+print("Product:", result[2])
+print("Quotient:", result[3])
