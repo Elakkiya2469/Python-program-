@@ -1,0 +1,24 @@
+def count_departments(org_chart):
+    total_departments = 1  # Count the current department
+    for sub_department in org_chart.values():
+        if sub_department:  # Check if the sub-department is not empty
+            total_departments += count_departments(sub_department)  # Recursively count sub-departments
+    return total_departments
+
+# Example usage:
+organizational_chart = {
+    'HR': {
+        'Recruitment': {},
+        'Training': {}
+    },
+    'Finance': {
+        'Accounts': {},
+        'Budgeting': {
+            'Analysis': {},
+            'Forecasting': {}
+        }
+    }
+}
+
+total_departments = count_departments(organizational_chart)
+print("Total number of departments:", total_departments)
