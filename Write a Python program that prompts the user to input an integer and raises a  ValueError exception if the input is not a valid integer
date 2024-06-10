@@ -1,0 +1,16 @@
+def get_integer_input():
+    user_input = input("Please enter an integer: ")
+    try:
+        # Try to convert the input to an integer
+        value = int(user_input)
+        print(f"You entered a valid integer: {value}")
+        return value
+    except ValueError:
+        # Raise a ValueError with a custom message if conversion fails
+        raise ValueError("Invalid input: Not a valid integer.")
+
+if __name__ == "__main__":
+    try:
+        get_integer_input()
+    except ValueError as e:
+        print(e)
