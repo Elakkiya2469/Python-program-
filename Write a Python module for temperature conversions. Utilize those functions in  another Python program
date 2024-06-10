@@ -1,0 +1,49 @@
+def celsius_to_fahrenheit(celsius):
+    """Convert Celsius to Fahrenheit."""
+    return (celsius * 9/5) + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    """Convert Fahrenheit to Celsius."""
+    return (fahrenheit - 32) * 5/9
+
+def celsius_to_kelvin(celsius):
+    """Convert Celsius to Kelvin."""
+    return celsius + 273.15
+
+def kelvin_to_celsius(kelvin):
+    """Convert Kelvin to Celsius."""
+    return kelvin - 273.15
+
+def fahrenheit_to_kelvin(fahrenheit):
+    """Convert Fahrenheit to Kelvin."""
+    return (fahrenheit + 459.67) * 5/9
+
+def kelvin_to_fahrenheit(kelvin):
+    """Convert Kelvin to Fahrenheit."""
+    return (kelvin * 9/5) - 459.67
+
+def main():
+    # Demonstrate temperature conversions
+    celsius = 25
+    fahrenheit = celsius_to_fahrenheit(celsius)
+    kelvin = celsius_to_kelvin(celsius)
+
+    print(f"{celsius}°C is {fahrenheit}°F")
+    print(f"{celsius}°C is {kelvin}K")
+
+    fahrenheit = 77
+    celsius = fahrenheit_to_celsius(fahrenheit)
+    kelvin = fahrenheit_to_kelvin(fahrenheit)
+
+    print(f"{fahrenheit}°F is {celsius}°C")
+    print(f"{fahrenheit}°F is {kelvin}K")
+
+    kelvin = 298.15
+    celsius = kelvin_to_celsius(kelvin)
+    fahrenheit = kelvin_to_fahrenheit(kelvin)
+
+    print(f"{kelvin}K is {celsius}°C")
+    print(f"{kelvin}K is {fahrenheit}°F")
+
+if __name__ == "__main__":
+    main()
