@@ -1,0 +1,27 @@
+def get_element_at_index(lst, index):
+    try:
+        # Attempt to access the element at the given index
+        element = lst[index]
+        return element
+    except IndexError:
+        # Handle the case where the index is out of range
+        print(f"Error: The index {index} is out of range for the list of length {len(lst)}.")
+
+def main():
+    # Example list
+    example_list = [1, 2, 3, 4, 5]
+
+    # Prompt the user to enter an index
+    try:
+        index = int(input("Enter an index to retrieve the element from the list: "))
+    except ValueError:
+        print("Invalid input. Please enter an integer.")
+        return
+
+    # Retrieve and print the element at the specified index
+    element = get_element_at_index(example_list, index)
+    if element is not None:
+        print(f"The element at index {index} is {element}.")
+
+if __name__ == "__main__":
+    main()
